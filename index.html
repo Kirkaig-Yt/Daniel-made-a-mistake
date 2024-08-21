@@ -14,7 +14,7 @@
         .container {
             height: 12px;
             position: relative;
-  }
+        }
         .center {
             margin: 0;
             position: absolute;
@@ -22,7 +22,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             transform: translate(-6px, -1px);
-  }
+        }
         .mistakes {
             font-size: 16px;
             text-align: center;
@@ -100,18 +100,25 @@
             <div class="comment-header">
                 <span class="author">John Doe:</span>
                 <span class="stars">⭐⭐⭐⭐⭐</span>
-                <div class="container">
-                    <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="center">
-                    <button class="btn" hidden></button>
-                </div>
             </div>
-            <span class=comment-text>This is a great article!</span>
+            <span class="comment-text">This is a great article!</span>
+            <div class="container">
+                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="center">
+                <button class="btn" hidden onclick="alert('like button was pressed')"></button>
+            </div>
         </div>
-           <div class="comment-header">
+        <div class="comment">
+            <div class="comment-header">
                 <span class="author">Daniel *****:</span>
                 <span class="stars">⭐</span>
             </div>
-            <span class=comment-text>This is a breach of privacy!😥 Good job on the comments though, that gets you 1 star.</span>
+            <span class="comment-text">This is a breach of privacy!😥 Good job on the comments though, that gets you 1 star.</span>
+            <!-- Move the button here -->
+            <div class="container">
+                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="center">
+                <button class="btn" hidden onclick="alert('like button was pressed')"></button>
+            </div>
         </div>
+    </div>    
 </body>
 </html>
