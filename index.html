@@ -10,6 +10,12 @@
         .btn {
             height: 12px;
             width: 12px;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform: translate(-6px, -1px);
         }
         .container {
             height: 12px;
@@ -104,7 +110,7 @@
             <span class="comment-text">This is a great article!</span>
             <div class="container">
                 <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="center">
-                <button class="btn" onclick="alert('like button was pressed')"></button>
+                <button class="btn" hidden onclick="alert('like button was pressed')"></button>
             </div>
         </div>
         <div class="comment">
@@ -116,7 +122,7 @@
             <!-- Move the button here -->
             <div class="container">
                 <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="center">
-                <button class="btn" onclick="alert('like button was pressed')"></button>
+                <button class="btn" hidden onclick="alert('like button was pressed')"></button>
             </div>
         </div>
     </div>    
