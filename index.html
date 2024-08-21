@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>manwhomakesmistakes.com</title>
     <style>
-        .btn {
-            height: 12px;
-            width: 12px;
+        .like-right-side {
             margin: 0;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transform: translate(-6px, -1px);
+            left: 85%;
+        }
+        .dislike-right-side {
+            margin: 0;
+            position: absolute;
+            left: 100%;
         }
         .container {
             height: 12px;
@@ -109,7 +109,8 @@
             </div>
             <span class="comment-text">This is a great article!</span>
             <div class="container">
-                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="center" onclick="alert('like button was pressed')">
+                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="like-right-side" onclick="alert('like button was pressed')">
+                <img src="resources/dislike.png" style="width: 14px; height: 14px;" alt="Dislike_Button" class="dislike-right-side" onclick="alert('dislike button was pressed')">
             </div>
         </div>
         <div class="comment">
@@ -120,7 +121,8 @@
             <span class="comment-text">This is a breach of privacy!😥 Good job on the comments though, that gets you 1 star.</span>
             <!-- Move the button here -->
             <div class="container">
-                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="center" onclick="alert('like button was pressed')">
+                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="like-right-side" onclick="alert('like button was pressed')">
+                <img src="resources/dislike.png" style="width: 14px; height: 14px;" alt="Dislike_Button" class="dislike-right-side" onclick="alert('dislike button was pressed')">
             </div>
         </div>
     </div>    
