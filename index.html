@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    npm install express body-parser
+    node server.js
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,6 +104,11 @@
     <p class="mistakes">2. Thinking sardines are as small as anchovies</p>
     <p> </p>
     <div class="comments">
+        <form id="commentForm">
+            <input type="text" id="author" placeholder="Your name" required>
+            <textarea id="commentText" placeholder="Your comment" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
         <h2>Comments</h2>
         <div class="comment">
             <div class="comment-header">
@@ -127,5 +134,36 @@
             </div>
         </div>
     </div>    
+    <script>
+    document.getElementById('commentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const author = document.getElementById('author').value;
+        const commentText = document.getElementById('commentText').value;
+
+        fetch('/add-comment', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ author, commentText })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                // Add the new comment to the comments section
+                const commentsDiv = document.querySelector('.comments');
+                const newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.innerHTML = `
+                    <div class="comment-header">
+                        <span class="author">${author}:</span>
+                    </div>
+                    <span class="comment-text">${commentText}</span>
+                `;
+                commentsDiv.appendChild(newComment);
+            }
+        });
+    });
+</script>
 </body>
 </html>
