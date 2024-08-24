@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8" />
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>manwhomakesmistakes.com</title>
+    <title>Daniel Makes Mistakes</title>
     <style>
+        /* the container for writing new comments */
+        .new-comments {
+            position: relative;
+            transform: translate(0px, 40%);
+        }
         .like-right-side {
             margin: 0;
             position: absolute;
@@ -17,6 +23,7 @@
             position: absolute;
             left: 100%;
         }
+        /* container for the like/dislike button */
         .container {
             height: 12px;
             position: relative;
@@ -58,15 +65,16 @@
             padding: 0;
             background-color: black;
         }
+        /* this is the comments container */
         .comments {
             color: white;
             border: 2px solid black;
-            max-width: 600px;
+            max-width: 70%;
             margin: 0 auto;
             padding: 20px;
             background-color: black;
             border-radius: 5px;
-        }
+        } 
         .comment {
             margin-bottom: 20px;
             border-bottom: 1px solid white;
@@ -77,6 +85,7 @@
         }
         .author {
             font-weight: bold;
+            font-size: 120%;
             color: white;
         }
         p {
@@ -96,17 +105,12 @@
 </head>
 <body>
     <h1 class="title">Daniel makes mistakes</h1>
-    <p class="subtitle">Stay updated for a list of Daniel's mistakes</p>
+    <li><a href="#"><p class="subtitle">Stay updated for a list of Daniel's mistakes</p></a></li>
     <p> </p>
     <p class="mistakes">1. Giving me access to a computer</p>
     <p class="mistakes">2. Thinking sardines are as small as anchovies</p>
     <p> </p>
     <div class="comments">
-        <form id="commentForm">
-            <input type="text" id="author" placeholder="Your name" required>
-            <textarea id="commentText" placeholder="Your comment" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
         <h2>Comments</h2>
         <div class="comment">
             <div class="comment-header">
@@ -115,8 +119,8 @@
             </div>
             <span class="comment-text">This is a great article!</span>
             <div class="container">
-                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="like-right-side" onclick="alert('like button was pressed')">
-                <img src="resources/dislike.png" style="width: 14px; height: 14px;" alt="Dislike_Button" class="dislike-right-side" onclick="alert('dislike button was pressed')">
+                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="like-right-side" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
+                <img src="resources/dislike.png" style="width: 14px; height: 14px;" alt="Dislike_Button" class="dislike-right-side" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
             </div>
         </div>
         <div class="comment">
@@ -127,11 +131,19 @@
             <span class="comment-text">This is a breach of privacy!😥 Good job on the comments though, that gets you 1 star.</span>
             <!-- Move the button here -->
             <div class="container">
-                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="like-right-side" onclick="alert('like button was pressed')">
-                <img src="resources/dislike.png" style="width: 14px; height: 14px;" alt="Dislike_Button" class="dislike-right-side" onclick="alert('dislike button was pressed')">
+                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="like-right-side" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
+                <img src="resources/dislike.png" style="width: 14px; height: 14px;" alt="Dislike_Button" class="dislike-right-side" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
             </div>
         </div>
-    </div>    
+        <p><i>The server is not currently up so comments will not be processed, please be patient.<br>Talk to our underpaid support staff at danielmistakes@gmail.com</i></p>
+        <!-- new comments -->
+        <form id="commentForm" class="new-comments">
+            <input type="text" id="author" placeholder="Your name" required>
+            <textarea id="commentText" placeholder="Your comment" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div> 
+       <!-- the following script was made by copilot and needs to be reviewed -->
     <script>
     document.getElementById('commentForm').addEventListener('submit', function(event) {
         event.preventDefault();
