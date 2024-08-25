@@ -6,48 +6,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Daniel Makes Mistakes</title>
+    <title>The Math Behind Trolley vs Lobsters</title>
     <style>
-        .center {
-            margin: 0;
+        .home-button {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transform: translate(-6px, -1px);
-        }
-        .mistakes {
-            line-height: 50px;
-            font-size: 16px;
+            top: 0px;
+            left: 0%;
             text-align: center;
-            color: white;
-            margin: 20px;
-            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: rgb(1, 173, 1);
+            cursor: pointer;
         }
         .title {
-            font-size: 25px;
+            text-decoration: underline;
+            font-size: 30px;
             text-align: center;
             color: white;
+            margin-top: 25px;
         }
         .subtitle {
+            margin-bottom: 15px;
             font-size: 20px;
-            text-align: center;
-            color: white;
+            font-weight: bold;
         }
-        .comment-header {
+        .description {
+            font-size: 16px;
+        }
+        .sources {
+            font-weight: bold;
+            font-size: 14px;
+            color: white;
+        }       
+        .main {
+            color: white;
+            font-size: 12px;
+        }
+        .header {
             display: flex;
             align-items: baseline;
             justify-content: space-between;
             margin-bottom: 4px;
         }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: black;
-        }
-        /* this is the comments container */
-        .comments {
+        .container {
             color: white;
             max-width: 70%;
             margin: 0 auto;
@@ -55,19 +56,11 @@
             background-color: black;
             border-radius: 5px;
         } 
-        .comment {
-            margin-bottom: 20px;
-            border-bottom: 1px solid white;
-            padding-bottom: 10px;
-        }
-        .comment-text {
-            color: white;
-            font-size: 12px;
-        }
-        .author {
-            font-weight: bold;
-            font-size: 14px;
-            color: white;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
         }
         p {
             margin: 0;
@@ -85,18 +78,21 @@
     </script>
 </head>
 <body>
-    <h1 class="title">Daniel makes mistakes</h1>
-    <p> </p>
-</p>
-    <p> </p>
-    <div class="comments">
-        <h2>Comments</h2>
-        <div class="comment">
-            <div class="comment-header">
-                <span class="author">John Doe:</span>
-                <span class="stars">⭐⭐⭐⭐⭐</span>
+    <a href="index.html" class="home-button">
+        <button class="home-button">Home</button>
+    </a>
+    <h1 class="title">Can a tram get past 5 lobsters in this trolley problem?</h1>
+    <div class="container">
+        <p class="subtitle">The problem:</p>
+        <p class="sources">The trolley problem in question from neal.fun</p>
+        </div>
+            <img src="resources/lobster-trolley-problem.png" alt="Trolley Problem" style="width: 400px; margin-top: 5px; margin-left: 50%; transform: translateX(-200px);">
+            <div class="container">
+        <div class="body">
+            <div class="header">
             </div>
-            <span class="comment-text">This is a great article!</span>
-</script>
+            <p class="main">This is the problem in question. The first thing I wanted to figure out was how much force does the tram have (I will be calling it tram for most of this paper as trolley can get confused with a shopping trolley). I decided to first calculate the speed of the tram as it feels like a simple thing to do, there is an animation of the trolley in motion on the website after you make a choice. So all that needs to be done is to get a scale and measure the distance it moves in a second. Luckily, there's a standard width for tram tracks which is 1,435 millimetres. Knowing this I decided the easiest way to proceed was to create a new scene in blender and then import this image. I locked the image to my camera then created a long plane and lined the edges up to the ones in the photo.</p>
+        </div>
+    </div>
 </body>
 </html>

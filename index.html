@@ -8,74 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Daniel Makes Mistakes</title>
     <style>
-        .comment-points {
-            font-size: 14px;
-            position: relative;
+        .title {
+            font-size: 25px;
+            text-decoration: underline;
             text-align: center;
-            left: 88%;
-            margin: 10;
+            color: white;
         }
-        .like-button {
-        position: relative;
-        float: left;
-        margin: 0;
-        left: 88%;
-        cursor: pointer;
-        }
-
-        .like-button .like-hoverImg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: none;
-        }
-
-        .like-button:hover .like-hoverImg {
-        display: block;
-        }
-
-        .like-button:hover .like-hoverImg {
-        display: block;
-        }
-        /* the container for writing new comments */
-        .new-comments {
-            position: relative;
-            transform: translate(0px, 20px);
-        }
-        .dislike-button {
-        position: relative;
-        float: left;
-        margin: 0;
-        left: 95%;
-        cursor: pointer;
-        }
-
-        .dislike-button .dislike-hoverImg {
-        position: absolute;
-        left: 0;
-        top: 0;
-        display: none;
-        }
-
-        .dislike-button:hover .dislike-hoverImg {
-        display: block;
-        }
-
-        .dislike-button:hover .dislike-hoverImg {
-        display: block;
-        }
-        /* container for the like/dislike button */
-        .container {
-            height: 12px;
-            position: relative;
-        }
-        .center {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            transform: translate(-6px, -1px);
+        .subtitle {
+            font-size: 20px;
+            text-align: center;
+            color: white;
         }
         .mistakes {
             line-height: 50px;
@@ -85,29 +27,12 @@
             margin: 20px;
             padding: 10px;
         }
-        .title {
-            font-size: 25px;
-            text-align: center;
-            color: white;
-        }
-        .subtitle {
-            font-size: 20px;
-            text-align: center;
-            color: white;
-        }
         .comment-header {
             display: flex;
             align-items: baseline;
             justify-content: space-between;
             margin-bottom: 4px;
         }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: black;
-        }
-        /* this is the comments container */
         .comments {
             color: white;
             max-width: 70%;
@@ -116,6 +41,11 @@
             background-color: black;
             border-radius: 5px;
         } 
+        .author {
+            font-weight: bold;
+            font-size: 14px;
+            color: white;
+        }
         .comment {
             margin-bottom: 20px;
             border-bottom: 1px solid white;
@@ -125,10 +55,83 @@
             color: white;
             font-size: 12px;
         }
-        .author {
-            font-weight: bold;
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform: translate(-6px, -1px);
+        }
+        /* container for the like/dislike buttons */
+        .container {
+            left: 100%;
+            transform: translateX(-70px);
+            height: 14px;
+            width: 60px;
+            position: relative;
+        }
+        /* like/dislike buttons and points text */
+        .comment-points {
             font-size: 14px;
-            color: white;
+            position: relative;
+            text-align: center;
+            left: 0px;
+        }
+        .like-button {
+            position: relative;
+            float: left;
+            left: 0px;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .like-button .like-hoverImg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        .like-button:hover .like-hoverImg {
+            display: block;
+        }
+
+        .like-button:hover .like-hoverImg {
+            display: block;
+        }
+        /* the container for writing new comments */
+        .new-comments {
+            position: relative;
+            transform: translate(0px, 20px);
+        }
+        .dislike-button {
+            position: relative;
+            float: left;
+            margin: 0;
+            left: 50px;
+            cursor: pointer;
+        }
+
+        .dislike-button .dislike-hoverImg {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        .dislike-button:hover .dislike-hoverImg {
+            display: block;
+        }
+
+        .dislike-button:hover .dislike-hoverImg {
+            display: block;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
         }
         p {
             margin: 0;
@@ -149,6 +152,7 @@
     <h1 class="title">
         Daniel makes mistakes
     </h1>
+    <p class="subtitle">Stay updated for Daniel's latest mistakes</p>
     <p class="mistakes">1. Giving me access to a computer
     <br>2. Thinking sardines are as small as anchovies
     <a href="trolley_problem.html"><br>3. Giving me this trolley problem</a>
