@@ -8,20 +8,61 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Daniel Makes Mistakes</title>
     <style>
+        .comment-points {
+            font-size: 14px;
+            position: relative;
+            text-align: center;
+            left: 88%;
+            margin: 10;
+        }
+        .like-button {
+        position: relative;
+        float: left;
+        margin: 0;
+        left: 88%;
+        cursor: pointer;
+        }
+
+        .like-button .like-hoverImg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        }
+
+        .like-button:hover .like-hoverImg {
+        display: block;
+        }
+
+        .like-button:hover .like-hoverImg {
+        display: block;
+        }
         /* the container for writing new comments */
         .new-comments {
             position: relative;
-            transform: translate(0px, 40%);
+            transform: translate(0px, 20px);
         }
-        .like-right-side {
-            margin: 0;
-            position: absolute;
-            left: 85%;
+        .dislike-button {
+        position: relative;
+        float: left;
+        margin: 0;
+        left: 95%;
+        cursor: pointer;
         }
-        .dislike-right-side {
-            margin: 0;
-            position: absolute;
-            left: 100%;
+
+        .dislike-button .dislike-hoverImg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        }
+
+        .dislike-button:hover .dislike-hoverImg {
+        display: block;
+        }
+
+        .dislike-button:hover .dislike-hoverImg {
+        display: block;
         }
         /* container for the like/dislike button */
         .container {
@@ -37,6 +78,7 @@
             transform: translate(-6px, -1px);
         }
         .mistakes {
+            line-height: 50px;
             font-size: 16px;
             text-align: center;
             color: white;
@@ -68,7 +110,6 @@
         /* this is the comments container */
         .comments {
             color: white;
-            border: 2px solid black;
             max-width: 70%;
             margin: 0 auto;
             padding: 20px;
@@ -82,10 +123,11 @@
         }
         .comment-text {
             color: white;
+            font-size: 12px;
         }
         .author {
             font-weight: bold;
-            font-size: 120%;
+            font-size: 14px;
             color: white;
         }
         p {
@@ -104,11 +146,13 @@
     </script>
 </head>
 <body>
-    <h1 class="title">Daniel makes mistakes</h1>
-    <li><a href="#"><p class="subtitle">Stay updated for a list of Daniel's mistakes</p></a></li>
-    <p> </p>
-    <p class="mistakes">1. Giving me access to a computer</p>
-    <p class="mistakes">2. Thinking sardines are as small as anchovies</p>
+    <h1 class="title">
+        Daniel makes mistakes
+    </h1>
+    <p class="mistakes">1. Giving me access to a computer
+    <br>2. Thinking sardines are as small as anchovies
+    <a href="trolley_problem.html"><br>3. Giving me this trolley problem</a>
+</p>
     <p> </p>
     <div class="comments">
         <h2>Comments</h2>
@@ -119,8 +163,23 @@
             </div>
             <span class="comment-text">This is a great article!</span>
             <div class="container">
-                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="like-right-side" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
-                <img src="resources/dislike.png" style="width: 14px; height: 14px;" alt="Dislike_Button" class="dislike-right-side" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
+                <div class="like-button">
+                    <div class="imageInn">
+                      <img src="resources/like_clicked.png" style="height: 14px;" alt="Default Image">
+                    </div>
+                    <div class="like-hoverImg">
+                      <img src="resources/like_clicked.png" style="height: 14px;" alt="Profile Image" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
+                    </div>
+                </div>
+                <span class="comment-points" style="color: red;">69k</span>
+                <div class="dislike-button">
+                    <div class="imageInn">
+                      <img src="resources/dislike.png" style="height: 14px;" alt="Default Image">
+                    </div>
+                    <div class="dislike-hoverImg">
+                      <img src="resources/dislike_clicked.png" style="height: 14px;" alt="Profile Image" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
+                    </div>
+                </div>            
             </div>
         </div>
         <div class="comment">
@@ -131,16 +190,35 @@
             <span class="comment-text">This is a breach of privacy!😥 Good job on the comments though, that gets you 1 star.</span>
             <!-- Move the button here -->
             <div class="container">
-                <img src="resources/like.png" style="width: 14px; height: 14px;" alt="Like_Button" class="like-right-side" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
-                <img src="resources/dislike.png" style="width: 14px; height: 14px;" alt="Dislike_Button" class="dislike-right-side" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
+                <div class="like-button">
+                    <div class="imageInn">
+                      <img src="resources/like.png" style="height: 14px;" alt="Default Image">
+                    </div>
+                    <div class="like-hoverImg">
+                      <img src="resources/like_clicked.png" style="height: 14px;" alt="Profile Image" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
+                    </div>
+                </div>
+                <span class="comment-points" style="color: blue;">-420</span>
+                <div class="dislike-button">
+                    <div class="imageInn">
+                      <img src="resources/dislike_clicked.png" style="height: 14px;" alt="Default Image">
+                    </div>
+                    <div class="dislike-hoverImg">
+                      <img src="resources/dislike_clicked.png" style="height: 14px;" alt="Profile Image" onclick="alert('buttons do not currently do anything yet, the single developer working on this does not get paid')">
+                    </div>
+                </div>            
             </div>
         </div>
-        <p><i>The server is not currently up so comments will not be processed, please be patient.<br>Talk to our underpaid support staff <a href="mailto:danielmistakes@gmail.com">@danielmistakes@gmail.com</a></a></i></p>
+        <p class="comment-text"><i>The server is not currently up so comments will not be processed, please be patient.
+            <br>Talk to our underpaid support staff 
+            <a href="mailto:danielmistakes@gmail.com" target="_blank">@danielmistakes@gmail.com
+            </a></a></i></p>
         <!-- new comments -->
-        <form id="commentForm" class="new-comments">
+        <form id="commentForm" class="new-comments"
+        style="width: 50px;">
             <input type="text" id="author" placeholder="Your name" required>
-            <textarea id="commentText" placeholder="Your comment" required></textarea>
-            <button type="submit">Submit</button>
+            <textarea id="commentText" placeholder="Your comment" required style="width: 250px;"></textarea>
+            <button type="submit" style="position: relative; top: 10px; width: 100px; height: 30px;">Submit</button>
         </form>
     </div> 
        <!-- the following script was made by copilot and needs to be reviewed -->
