@@ -21,30 +21,48 @@
             background-color: rgb(1, 173, 1);
             cursor: pointer;
         }
+        .title-container {
+            text-align: center;
+        }
         .title {
+            display: inline-block;
             text-decoration: underline;
             font-size: 30px;
             text-align: center;
-            color: white;
+            color: #bfbfbf;
+            background-color: #1a1a1a;
+            margin: 15px auto;
+            border-radius: 30px;
             margin-top: 25px;
         }
+        .subtitle-container {
+            text-align: center;
+        }
         .subtitle {
+            text-align: center;
             margin-bottom: 15px;
             font-size: 25px;
             font-weight: bold;
+            text-decoration: underline;
+        }
+        .description-container {
+            text-align: center;
         }
         .description {
             font-size: 23px;
+        }
+        .sources-container {
+            text-align: center;
         }
         .sources {
             text-align: center;
             position: relative;
             font-weight: bold;
             font-size: 21px;
-            color: white;
+            color: #bfbfbf;
         }       
         .main {
-            color: white;
+            color: #bfbfbf;
             font-size: 18px;
         }
         .header {
@@ -54,18 +72,18 @@
             margin-bottom: 4px;
         }
         .container {
-            color: white;
+            color: #bfbfbf;
             max-width: 70%;
             margin: 0 auto;
             padding: 20px;
-            background-color: black;
-            border-radius: 5px;
+            background-color: #1a1a1a;
+            border-radius: 30px;
         } 
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: black;
+            background-color: #121212;
         }
         p {
             margin: 0;
@@ -99,12 +117,16 @@
     <a href="index.html" class="home-button">
         <button class="home-button">Home</button>
     </a>
+    <div class="title-container">
     <h1 class="title">Can a tram get past 5 lobsters in this trolley problem?</h1>
+    </div>
     <div class="container">
-        <p class="subtitle">The problem:</p>
+        <p class="subtitle">The problem</p>
         </div>
-            <p class="sources">The trolley problem in question from neal.fun</p>
+    <div class="container">
+            <p class="sources">The trolley problem in question from neal.fun:</p>
             <img src="resources/lobster-trolley-problem.png" alt="Trolley Problem" style="width: 400px; margin-top: 5px; margin-left: 50%; transform: translate(-200px, 20px);">
+    </div>
             <div class="container">
         <div class="body">
             <div class="header">
