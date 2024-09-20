@@ -4,6 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Firebase -->
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBFlB54GpFC3dd1Z07PDF1UXr4WzWl3QJY",
+    authDomain: "manwhomakesmistakes-5ee46.firebaseapp.com",
+    databaseURL: "https://manwhomakesmistakes-5ee46-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "manwhomakesmistakes-5ee46",
+    storageBucket: "manwhomakesmistakes-5ee46.appspot.com",
+    messagingSenderId: "725749935283",
+    appId: "1:725749935283:web:67029e6bd36bd8a9efd4c6",
+    measurementId: "G-R3DV73L19L"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/e820f7e96a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.min.css">
